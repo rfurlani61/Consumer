@@ -21,18 +21,16 @@ public class Produto {
 		this.preco = preco;
 	}
 	
-	public static void staticVoidUpdate(Produto p) {
-		p.setPreco(p.getPreco() * 1.1);
-	}
-	
-	public void nonStaticVoidUpdate() {
-		preco *= 1.1;
-	}
-	
 	@Override
 	public String toString() {
 		return "Produto [nome=" + nome + ", preco=" + String.format("%.2f", preco) + "]";
 	}
 	
+	public static String staticUpperCaseNome(Produto p) {
+		return p.getNome().toUpperCase();
+	}	
+	public String nonstaticUpperCaseNome() {
+		return nome.toUpperCase();	
+	}
 	
 }
